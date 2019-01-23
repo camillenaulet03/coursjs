@@ -67,3 +67,9 @@ h3 {
         text-align: center;
         vertical-align: bottom;
 }
+
+.btn-outline-secondary {
+        position:absolute;
+        top: 50px;
+        left: 50px;
+}
