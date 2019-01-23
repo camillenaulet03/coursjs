@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>popin_js</title>
     <link rel="stylesheet" type="text/css" href="index.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
     <script>
@@ -25,15 +26,11 @@
     </script>
 
     <div id="light" class="white_content">
-        <table>
-            <tr>
-                <div class="popup_close"><a href = "" onclick = "popup('light');"><img src="cancel.png" /></a></div>
-            </tr>
-            <tr>
-                <button class="btn btn-block btn-primary popup_close" type="submit" onclick = "popup('light');">Valider</button>
-            </tr>
-        </table>
+        <div class="popup_close"><a href = "" onclick = "popup('light');"><img src="cancel.png" height="30" width="30"/></a></div>
+        <div class="class2"><img src="dab.png" /></div>
+        <button class="btn btn-primary popup_close" type="submit" onclick = "popup('light');">Valider</button>
     </div>
+    <div id="fade" class="black_overlay"></div>
     <a href="#" onclick="popup('light');"><button>Bouton</button></a>
 </body>
 </html>

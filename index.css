@@ -36,7 +36,12 @@ body {
         font-family:Arial, sans-serif;
         font-size:13px;
 }
+.class2{
+        height: 300px;
+        width: 300px;
+}
 
 .popup_close {
         float:right;
 }
+
