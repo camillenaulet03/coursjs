@@ -4,6 +4,10 @@ body {
         min-height: 100%;
 }
 
+h3 {
+        height: 100px;
+}
+
 .black_overlay{
         display: none;
         position: fixed;
@@ -40,8 +44,26 @@ body {
 .img{
         height: 250px;
         width: 250px;
+        float:left;
 }
 
 .popup_close {
         float:right;
+}
+
+.result {
+        position:absolute;
+        bottom: 100px;
+        right: 100px;
+}
+
+.mail {
+        position:absolute;
+        bottom: 225px;
+        right: 150px;
+}
+
+.bouton {
+        text-align: center;
+        vertical-align: bottom;
 }
