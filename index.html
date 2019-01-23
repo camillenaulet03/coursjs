@@ -12,12 +12,12 @@
         function popup(identifiant) {
             var temp=identifiant;
             //alert ('1');
-            if (document.getElementById(temp).style.display==="block") {//Donc le bloc est affichÃ©, on le masque
+            if (document.getElementById(temp).style.display==="block") {//Donc le bloc est affiché, on le masque
                 document.getElementById(temp).style.display="none";
                 //alert('2');
                 document.getElementById('fade').style.display="none";
                 //alert('3');
-            } else {//Donc le bloc est masquÃ©, on l'affiche
+            } else {//Donc le bloc est masqué, on l'affiche
                 document.getElementById(temp).style.display="block";
                 //alert('4');
                 document.getElementById('fade').style.display="block";
@@ -27,9 +27,37 @@
     </script>
 
     <div id="light" class="white_content">
-        <div class="popup_close"><a href = "" onclick = "popup('light');"><img src="cancel.png" height="30" width="30"/></a></div>
-        <div class="img"><img src="dab.png" /></div>
-        <div class="w3-padding w3-display-bottommiddle" style="height:20%"><button class="btn btn-primary" type="submit" onclick = "popup('light');">Valider</button></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <form>
+            <div class="popup_close"><a href = "" onclick = "popup('light');"><img src="cancel.png" height="30" width="30"/></a></div>
+            <label for="email">Saisir une adresse mail</label><input type="text" id="email" />
+            <div class="img"><img src="dab.png" /></div>
+            <h2 id="result"></h2>
+            <div class="w3-padding w3-display-bottommiddle" style="height:20%"><button class="btn btn-primary" type="submit" id="validate">Valider</button></div>
+        </form>
+        <script>
+            function validateEmail(email) {
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            function validate() {
+                var $result = $("#result");
+                var email = $("#email").val();
+                $result.text("");
+
+                if (validateEmail(email)) {
+                    $result.text(email + " est valide :)");
+                    $result.css("color", "green");
+                } else {
+                    $result.text(email + " n'est pas valide :(");
+                    $result.css("color", "red");
+                }
+                return false;
+            }
+
+            $("#validate").bind("click", validate);
+        </script>
     </div>
     <div id="fade" class="black_overlay"></div>
     <a href="#" onclick="popup('light');"><button>Bouton</button></a>
