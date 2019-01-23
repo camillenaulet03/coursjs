@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>popin_js</title>
+    <link rel="stylesheet" type="text/css" href="index.css" >
+</head>
+<body>
+    <script>
+        function popup(identifiant) {
+            var temp=identifiant;
+            //alert ('1');
+            if (document.getElementById(temp).style.display==="block") {//Donc le bloc est affichÃ©, on le masque
+                document.getElementById(temp).style.display="none";
+                //alert('2');
+                document.getElementById('fade').style.display="none";
+                //alert('3');
+            } else {//Donc le bloc est masquÃ©, on l'affiche
+                document.getElementById(temp).style.display="block";
+                //alert('4');
+                document.getElementById('fade').style.display="block";
+                //alert('5');
+            }
+        }
+    </script>
+
+    <div id="light" class="white_content">
+        <table>
+            <tr>
+                <div class="popup_close"><a href = "" onclick = "popup('light');"><img src="cancel.png" /></a></div>
+            </tr>
+            <tr>
+                <button class="btn btn-block btn-primary popup_close" type="submit" onclick = "popup('light');">Valider</button>
+            </tr>
+        </table>
+    </div>
+    <a href="#" onclick="popup('light');"><button>Bouton</button></a>
+</body>
+</html>
