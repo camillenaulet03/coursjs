@@ -6,24 +6,23 @@
     <link rel="stylesheet" type="text/css" href="index.css" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 
-
     <div id="light" class="white_content">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <form>
-            <div class="popup_close"><a href = "" onclick = "popup('light');"><img src="cancel.png" height="30" width="30"/></a></div>
-            <span class="mail"><label for="email">Saisir une adresse mail: </label><input type="text" id="email" /></span>
+            <div class="popup_close"><a href = ""><img src="cancel.png" height="30" width="30"/></a></div>
+            <span class="email"><label for="email">Saisir une adresse mail: </label><input type="text" id="email" /></span>
             <span class="img"><img src="dab.png" /></span>
             <span class="result"><h3 id="result"></h3></span>
-            <span class="w3-padding w3-display-bottommiddle" style="height:20%"><button class="btn btn-primary" type="submit" id="validate">Valider</button></span>
-            <span class="w3-padding w3-display-bottomright" style="height:20%; width:40%"><button class="btn btn-danger" type="submit" id="fermer" onclick = "popup('light');">Fermer</button></span>
+            <span class="w3-padding w3-display-bottommiddle"><button class="btn btn-primary" type="submit" id="validate">Valider</button></span>
+            <span class="w3-padding w3-display-bottomright"><button class="btn btn-danger" type="submit" id="fermer">Fermer</button></span>
         </form>
-        <script src="index.js"></script>
+
     </div>
     <div id="fade" class="black_overlay"></div>
-    <a href="#" onclick="popup('light');"><button class="btn btn-outline-secondary">Bouton</button></a>
+    <a href="#"><button class="btn btn-outline-secondary" id="bouton">Bouton</button></a>
+    <script src="index.js"></script>
 </body>
 </html>
