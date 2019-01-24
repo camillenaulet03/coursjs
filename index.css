@@ -73,3 +73,14 @@ h3 {
         top: 50px;
         left: 50px;
 }
+
+.w3-padding .w3-display-bottommiddle {
+        position: absolute;
+        bottom:20%;
+}
+
+.w3-display-bottomright {
+        position: absolute;
+        bottom: 20%;
+        left: 60%;
+}
