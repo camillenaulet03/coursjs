@@ -44,6 +44,9 @@ function checkForm() {
         }
     }
 }
+
+$("#valide").bind("click", checkForm);
+
 // AJAX code to check input field values when onblur event triggerd.
 function validate(field, query) {
     var xmlhttp;
