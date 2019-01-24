@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>popin_js</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
 
     <div id="light" class="white_content">
         <form>
-            <div class="popup_close"><a href = "" id="annuler"><img src="cancel.png" height="30" width="30"/></a></div>
-            <span class="email"><label for="email">Saisir une adresse mail: </label><input type="text" id="email" /></span>
+            <div class="popup_close"><a href="" id="annuler"><img src="cancel.png" height="30" width="30"/></a></div>
+            <span class="email"><label for="email">Saisir une adresse mail: </label><input type="text" id="email" onkeyup="showHint(this.value)" /></span>
             <span class="img"><img src="dab.png" /></span>
+            <span id="txtHint"></span>
             <span class="result"><h3 id="result"></h3></span>
             <span class="w3-padding w3-display-bottommiddle"><button class="btn btn-primary" type="submit" id="validate">Valider</button></span>
             <span class="w3-padding w3-display-bottomright"><button class="btn btn-danger" type="submit" id="fermer">Fermer</button></span>
         </form>
-
     </div>
+
     <div id="fade" class="black_overlay"></div>
     <a href="#"><button class="btn btn-outline-secondary" id="bouton">Bouton</button></a>
     <script src="index.js"></script>
