@@ -57,7 +57,7 @@ h3 {
         right: 100px;
 }
 
-.mail {
+.email {
         position:absolute;
         bottom: 225px;
         right: 150px;
@@ -81,6 +81,5 @@ h3 {
 
 .w3-display-bottomright {
         position: absolute;
-        bottom: 20%;
         left: 60%;
 }
