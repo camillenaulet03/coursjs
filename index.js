@@ -23,8 +23,8 @@ function verif() {
 }
 
 function vide() {
-    if (document.querySelector("#password").value.length == 0) {
-        document.getElementById('password').style.border = "2px solid red;";
+    if ($("#password").val() == "") {
+        $("#password").css("border", "2px solid red");
     }
 }
 
@@ -51,4 +51,3 @@ verif()
 document.querySelector("#password").addEventListener("input", () => {
     vide()
 })
-
