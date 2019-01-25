@@ -77,7 +77,7 @@ verif()
 
 function reponse(id){
     var mail = document.getElementsByClassName('email1');
-    for (var a in highlighted) {
+    for (var a in mail) {
         a.className = "entree";
     }
     bigScreen.innerHTML = selection[id];
