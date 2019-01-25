@@ -10,20 +10,20 @@
 </head>
 <body>
 
-    <div id="light" class="white_content">
-        <form id="myForm" method='post' name="myForm">
-            <div class="popup_close"><a href="" id="annuler"><img src="cancel.png" height="30" width="30"/></a></div>
-            <span class="email"><label for="email1">Saisir une adresse mail: </label><input type="text" id="email1" name="email1" /></span>
-            <span class="mdp"><label for="password">Saisir un mot de passe: </label><input type="password" id="password" /></span>
-            <span class="img"><img src="dab.png" /></span>
-            <span class="result"><h3 id="result"></h3></span>
-            <span class="w3-padding w3-display-bottommiddle"><button class="btn btn-primary" type="submit" id="valide" disabled>Valider</button></span>
-            <span class="w3-padding w3-display-bottomright"><button class="btn btn-danger" type="submit" id="fermer">Fermer</button></span>
-        </form>
-    </div>
+<div id="light" class="white_content">
+    <form id="myForm" method='post' name="myForm">
+        <div class="popup_close"><a href="" id="annuler"><img src="cancel.png" height="30" width="30"/></a></div>
+        <span class="email"><label for="email1"></label><input type="text" id="email1" name="email1" placeholder="Saisir une adresse mail" /></span>
+        <span class="password"><label for="password"></label><input type="password" id="password" placeholder="Saisir un mot de passe" /></span>
+        <span class="img"><img src="dab.png" /></span>
+        <span class="result"><h3 id="result"></h3></span>
+        <span class="w3-padding w3-display-bottommiddle"><button class="btn btn-primary" type="submit" id="valide" disabled>Valider</button></span>
+        <span class="w3-padding w3-display-bottomright"><button class="btn btn-danger" type="submit" id="fermer">Fermer</button></span>
+    </form>
+</div>
 
-    <div id="fade" class="black_overlay"></div>
-    <a href="#"><button class="btn btn-outline-secondary" id="bouton">Bouton</button></a>
-    <script src="index.js"></script>
+<div id="fade" class="black_overlay"></div>
+<a href="#"><button class="btn btn-outline-secondary" id="bouton">Se Connecter</button></a>
+<script src="index.js"></script>
 </body>
 </html>
