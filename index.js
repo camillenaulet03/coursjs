@@ -75,6 +75,15 @@ document.querySelector("#email1").addEventListener("input", () => {
 verif()
 })
 
+function showIt(id){
+    var highlighted = document.getElementsByClassName('email1');
+    for (var d in highlighted) {
+        d.className = "previewPanelEntry";
+    }
+    bigScreen.innerHTML = selection[id];
+    document.getElementById(id).className ="highlighted";
+}
+
 function verif() {
     a = /^[a-z0-9\-_\.]+@[a-z0-9]+\.[a-z]{2,5}$/
     var $result = $("#result");
