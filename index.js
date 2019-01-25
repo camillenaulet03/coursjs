@@ -39,7 +39,8 @@ document.querySelector('#fermer').addEventListener('click', (event) => {
     popup('light')
 })
 
-document.querySelector("#valide").addEventListener('click', () => {
+document.querySelector("#myForm").addEventListener('submit', (event) => {
+    event.preventDefault()
     $.ajax({
         type: 'POST',
         data: {
