@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; outline: 0; }
+{ margin: 0; padding: 0; outline: 0; }
 
 body {
         min-height: 100%;
@@ -60,7 +60,12 @@ h3 {
 .email {
         position:absolute;
         bottom: 225px;
-        right: 150px;
+        right: 125px;
+}
+.password{
+        position:absolute;
+        bottom: 150px;
+        right: 125px;
 }
 
 .bouton {
