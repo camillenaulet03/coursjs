@@ -51,3 +51,22 @@ verif()
 document.querySelector("#password").addEventListener("input", () => {
     vide()
 })
+
+document.querySelector("#valide").addEventListener("click", () => {
+
+$.ajax({
+    type: 'POST',
+    data: {
+        email1: document.querySelector("#email1").value,
+        password: document.querySelector("#password").value
+}, // Si tu as des variables à faire passer, et dans le php tu les appelles via $_POST[nom de la variable]
+    url: "index.php", // lien du php appelé
+    success: function() {
+    alert('réussi');
+},
+error : function() {
+    alert('erreur');
+    }
+
+});
+})
