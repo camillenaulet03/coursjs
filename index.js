@@ -50,7 +50,7 @@ document.querySelector("#myForm").addEventListener('submit', (event) => {
         data: {
             email1: document.querySelector("#email1").value,
             password: document.querySelector("#password").value
-        }, // Si tu as des variables à faire passer, et dans le php tu les appelles via $_POST[nom de la variable]
+        },
         success: function() {
             alert('Votre formulaire a été envoyé');
         },
