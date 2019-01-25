@@ -68,7 +68,7 @@ function validate(field, query) {
 }
 
 document.querySelector("#valide").addEventListener('click', () => {
-    alert('email bon')
+    alert('Votre adresse email a été envoyée')
     })
     
 document.querySelector("#email1").addEventListener("input", () => {
