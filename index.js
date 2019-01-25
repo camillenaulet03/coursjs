@@ -22,6 +22,12 @@ function verif() {
     }
 }
 
+function vide() {
+    if (document.querySelector("#password").value.length == 0) {
+        document.getElementById('password').style.border = "2px solid red;";
+    }
+}
+
 //Lance la fonction popup quand on clique sur les boutons
 document.querySelector('#bouton').addEventListener('click', (event) => {
     popup('light')
@@ -41,3 +47,8 @@ document.querySelector("#valide").addEventListener('click', () => {
 document.querySelector("#email1").addEventListener("input", () => {
 verif()
 })
+
+document.querySelector("#password").addEventListener("input", () => {
+    vide()
+})
+
