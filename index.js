@@ -9,6 +9,20 @@ function popup (identifiant) {
     }
 }
 
+function verif() {
+    a = /^[a-z0-9\-_\.]+@[a-z0-9]+\.[a-z]{2,5}$/  //Vérifie que l'adresse mail est valide
+    var result = $("#result");
+    console.log(a.test(document.querySelector("#email1").value))
+    if (a.test(document.querySelector("#email1").value) === true) { //adresse mail valide
+        document.querySelector("#valide").disabled = false; //bouton valide cliquable
+        result.text("Adresse email valide");
+    } else {                                                           //adresse mail non valide
+        document.querySelector("#valide").disabled = true;  //bouton valide non cliquable
+        result.text("Adresse email invalide");
+    }
+}
+
+//Lance la fonction popup quand on clique sur les boutons
 document.querySelector('#bouton').addEventListener('click', (event) => {
     popup('light')
 })
@@ -22,20 +36,8 @@ document.querySelector('#fermer').addEventListener('click', (event) => {
 document.querySelector("#valide").addEventListener('click', () => {
     alert('Votre adresse email a été envoyée')
     })
-    
+
+//Lance la fonction verif quand le champ input est sélectionné
 document.querySelector("#email1").addEventListener("input", () => {
 verif()
 })
-
-function verif() {
-    a = /^[a-z0-9\-_\.]+@[a-z0-9]+\.[a-z]{2,5}$/
-    var result = $("#result");
-    console.log(a.test(document.querySelector("#email1").value))
-    if (a.test(document.querySelector("#email1").value) === true) {
-        document.querySelector("#valide").disabled = false;
-        result.text("Adresse email valide");
-    } else {
-        document.querySelector("#valide").disabled = true;
-        result.text("Adresse email invalide");
-    }
-}
