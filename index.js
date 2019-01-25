@@ -75,13 +75,13 @@ document.querySelector("#email1").addEventListener("input", () => {
 verif()
 })
 
-function showIt(id){
-    var highlighted = document.getElementsByClassName('email1');
-    for (var d in highlighted) {
-        d.className = "previewPanelEntry";
+function reponse(id){
+    var mail = document.getElementsByClassName('email1');
+    for (var a in highlighted) {
+        a.className = "entree";
     }
     bigScreen.innerHTML = selection[id];
-    document.getElementById(id).className ="highlighted";
+    document.getElementById(id).className ="mail";
 }
 
 function verif() {
