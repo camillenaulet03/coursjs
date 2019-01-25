@@ -25,6 +25,10 @@ function verif() {
 function vide() {
     if ($("#password").val() == "") {
         $("#password").css("border", "2px solid red");
+        document.querySelector("#valide").disabled = true;
+    } else {
+        $("#password").css("border", "2px solid green");
+        document.querySelector("#valide").disabled = false;
     }
 }
 
@@ -47,26 +51,20 @@ document.querySelector("#myForm").addEventListener('submit', (event) => {
             email1: document.querySelector("#email1").value,
             password: document.querySelector("#password").value
         }, // Si tu as des variables à faire passer, et dans le php tu les appelles via $_POST[nom de la variable]
-        url: "index.php", // lien du php appelé
         success: function() {
-            alert('réussi');
+            alert('Votre formulaire a été envoyé');
         },
         error : function() {
             alert('erreur');
         }
     });
-    alert('Votre adresse email a été envoyée')
+})
+
+document.querySelector("#password").addEventListener("input", () => {
+    vide()
 })
 
 //Lance la fonction verif quand le champ input est sélectionné
 document.querySelector("#email1").addEventListener("input", () => {
 verif()
-})
-
-document.querySelector("#password").addEventListener("input", () => {
-    vide()
-})
-
-document.querySelector("#password").addEventListener("input", () => {
-    vide()
 })
