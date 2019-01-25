@@ -88,11 +88,11 @@ function verif() {
     a = /^[a-z0-9\-_\.]+@[a-z0-9]+\.[a-z]{2,5}$/
     var $result = $("#result");
     console.log(a.test(document.querySelector("#email1").value))
-if (a.test(document.querySelector("#email1").value) === true) {
-    document.querySelector("#valide").disabled = false;
-    $result.text("Adresse email valide");
-} else {
-    document.querySelector("#valide").disabled = true;
-    $result.text("Adresse email invalide");
-}
+    if (a.test(document.querySelector("#email1").value) === true) {
+        document.querySelector("#valide").disabled = false;
+        $result.text("Adresse email valide");
+    } else {
+        document.querySelector("#valide").disabled = true;
+        $result.text("Adresse email invalide");
+    }
 }
