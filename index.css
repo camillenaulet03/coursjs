@@ -5,7 +5,7 @@ body {
 }
 
 h3 {
-        height: 100px;
+        height: 25px;
 }
 
 .black_overlay{
@@ -53,19 +53,20 @@ h3 {
 
 .result {
         position:absolute;
-        bottom: 100px;
+        bottom: 175px;
         right: 100px;
 }
 
 .email {
         position:absolute;
         bottom: 225px;
-        right: 125px;
+        right: 175px;
 }
+
 .password{
         position:absolute;
         bottom: 150px;
-        right: 125px;
+        right: 175px;
 }
 
 .bouton {

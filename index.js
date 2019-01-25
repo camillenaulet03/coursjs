@@ -25,9 +25,6 @@ function verif() {
 function vide() {
     if ($("#password").val() == "") {
         $("#password").css("border", "2px solid red");
-        document.querySelector("#valide").disabled = true;
-    } else {
-        document.querySelector("#valide").disabled = false;
     }
 }
 
